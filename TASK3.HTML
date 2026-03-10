@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Shopping</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f1f2f6;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .topbar {
+            background-color: #ff4757;
+            color: white;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        nav {
+            background-color: #1e272e;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff4757;
+            color: white;
+            padding: 5px 8px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+        }
+
+        .price {
+            color: #2ed573;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .old-price {
+            color: gray;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background-color: #1e272e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="topbar">
+    🔥 Mega Sale – Up to 50% Off!
+</div>
+
+<header>
+    <h1>UrbanCart</h1>
+    <p>Shop Smart. Shop Stylish.</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Electronics</a>
+    <a href="#">Offers</a>
+</nav>
+
+<div class="container">
+
+    <h2>Trending Products</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <span class="badge">30% OFF</span>
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Smart Watch</h3>
+            <p class="old-price">₹5,000</p>
+            <p class="price">₹3,500</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <span class="badge">New</span>
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Wireless Earbuds</h3>
+            <p class="price">₹2,999</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <span class="badge">40% OFF</span>
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Casual Shoes</h3>
+            <p class="old-price">₹4,000</p>
+            <p class="price">₹2,400</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <span class="badge">Hot</span>
+            <img src="https://via.placeholder.com/300" alt="">
+            <h3>Backpack</h3>
+            <p class="price">₹1,899</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 UrbanCart | HTML & CSS E-Commerce</p>
+</footer>
+
+</body>
+</html>
