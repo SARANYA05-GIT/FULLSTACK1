@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login & Register</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        }
+
+        .container {
+            width: 420px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 25px;
+        }
+
+        .tabs label {
+            flex: 1;
+            text-align: center;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #555;
+            border-bottom: 3px solid #ddd;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        #loginTab:checked ~ .tabs label[for="loginTab"],
+        #signupTab:checked ~ .tabs label[for="signupTab"] {
+            color: #1e88e5;
+            border-color: #1e88e5;
+        }
+
+        .form {
+            display: none;
+        }
+
+        #loginTab:checked ~ .login-form,
+        #signupTab:checked ~ .signup-form {
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        input:invalid {
+            border-color: #e53935;
+        }
+
+        input:valid {
+            border-color: #43a047;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1e88e5;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1565c0;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <input type="radio" name="tab" id="loginTab" checked>
+    <input type="radio" name="tab" id="signupTab">
+
+    <div class="tabs">
+        <label for="loginTab">Sign In</label>
+        <label for="signupTab">Sign Up</label>
+    </div>
+
+    <!-- Login Form -->
+    <form class="form login-form">
+        <h2>Welcome Back</h2>
+        <input type="text" placeholder="Username" required minlength="3">
+        <input type="password" placeholder="Password" required minlength="6">
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Signup Form -->
+    <form class="form signup-form">
+        <h2>Create Account</h2>
+        <input type="text" placeholder="Username" required minlength="3">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required minlength="6">
+        <p class="hint">Password must be at least 6 characters</p>
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>

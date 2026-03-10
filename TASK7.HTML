@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Feedback Form</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background: #f2f6ff;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .form-container{
+        background:white;
+        padding:25px;
+        width:350px;
+        border-radius:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+        text-align:center;
+    }
+
+    input, textarea{
+        width:100%;
+        padding:10px;
+        margin-top:8px;
+        margin-bottom:15px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        transition:0.3s;
+    }
+
+    /* Highlight on hover */
+    input:hover, textarea:hover{
+        border-color:#4a90e2;
+        background:#f0f7ff;
+    }
+
+    button{
+        width:100%;
+        padding:10px;
+        border:none;
+        background:#4a90e2;
+        color:white;
+        font-size:16px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#357ABD;
+    }
+
+    .error{
+        color:red;
+        font-size:13px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="form-container">
+<h2>Feedback Form</h2>
+
+<form id="feedbackForm">
+
+<label>Name</label>
+<input type="text" id="name" onkeyup="validateName()">
+<div id="nameError" class="error"></div>
+
+<label>Email</label>
+<input type="text" id="email" onkeyup="validateEmail()">
+<div id="emailError" class="error"></div>
+
+<label>Feedback</label>
+<textarea id="feedback" rows="4" onkeyup="validateFeedback()"></textarea>
+<div id="feedbackError" class="error"></div>
+
+<button type="button" ondblclick="submitForm()">Double Click to Submit</button>
+
+</form>
+</div>
+
+<script>
+
+// Reusable validation functions
+
+function validateName(){
+    let name = document.getElementById("name").value;
+    let error = document.getElementById("nameError");
+
+    if(name.length < 3){
+        error.innerText = "Name must be at least 3 characters.";
+        return false;
+    }
+    error.innerText = "";
+    return true;
+}
+
+function validateEmail(){
+    let email = document.getElementById("email").value;
+    let error = document.getElementById("emailError");
+
+    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(!email.match(pattern)){
+        error.innerText = "Enter a valid email.";
+        return false;
+    }
+    error.innerText = "";
+    return true;
+}
+
+function validateFeedback(){
+    let feedback = document.getElementById("feedback").value;
+    let error = document.getElementById("feedbackError");
+
+    if(feedback.length < 10){
+        error.innerText = "Feedback must be at least 10 characters.";
+        return false;
+    }
+    error.innerText = "";
+    return true;
+}
+
+// Double-click confirmation submit
+
+function submitForm(){
+
+    if(validateName() && validateEmail() && validateFeedback()){
+        alert("✅ Feedback submitted successfully!");
+        document.getElementById("feedbackForm").reset();
+    }
+    else{
+        alert("⚠️ Please correct the errors before submitting.");
+    }
+}
+
+</script>
+
+</body>
+</html>

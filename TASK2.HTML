@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media Blog Platform</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1e272e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #485460;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: white;
+            padding: 15px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .content {
+            width: 75%;
+        }
+
+        .post {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .post h2 {
+            color: #2f3640;
+        }
+
+        video, audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #1e272e;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1>🎥 Media Blog Platform</h1>
+    <p>Content-Driven Blog with Audio & Video Experience</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">Videos</a>
+    <a href="#">Podcasts</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li>Technology</li>
+            <li>Education</li>
+            <li>Media</li>
+            <li>Podcasts</li>
+        </ul>
+
+        <h3>About</h3>
+        <p>
+            This platform delivers informative blog content
+            integrated with audio and video playback.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Blog Post 1 -->
+        <div class="post">
+            <h2>📘 Learning Web Development</h2>
+            <p>
+                Web development is the process of creating websites
+                and applications using HTML, CSS, and other technologies.
+            </p>
+        </div>
+
+        <!-- Blog Post with Video -->
+        <div class="post">
+            <h2>🎬 Video Tutorial</h2>
+            <p>Watch this video to understand the basics of HTML.</p>
+
+            <video controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </div>
+
+        <!-- Blog Post with Audio -->
+        <div class="post">
+            <h2>🎧 Podcast Episode</h2>
+            <p>Listen to our audio discussion on modern web trends.</p>
+
+            <audio controls>
+                <source src="sample-audio.mp3" type="audio/mpeg">
+                Your browser does not support audio playback.
+            </audio>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 | Media Blog Platform | HTML & CSS Project</p>
+</footer>
+
+</body>
+</html>
